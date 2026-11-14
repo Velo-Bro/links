@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>ВелоБро — все ссылки</title>
+  <meta
+    name="description"
+    content="ВелоБро — блог про велопутешествия. Маршруты, обзоры трасс, полезные советы и встречи единомышленников."
+  >
+  <meta name="theme-color" content="#f1f3f6">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Jura:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    :root {
+      font-family: "Jura", sans-serif;
+      color: #151515;
+      background: #fff;
+      font-synthesis: none;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      min-height: 100svh;
+      padding: 20px;
+      display: grid;
+      place-items: center;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 360px;
+      min-height: 616px;
+      padding: 30px 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-radius: 24px;
+      background: linear-gradient(
+        155deg,
+        #edf1f7 0%,
+        #f9faf8 65%,
+        #eef0ec 100%
+      );
+      box-shadow: 0 5px 15px rgb(0 0 0 / 22%);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      padding: 6px 8px;
+      border-radius: 12px;
+      background: #fff;
+      box-shadow: 0 3px 12px rgb(0 0 0 / 22%);
+    }
+
+    .brand img {
+      display: block;
+      width: 145px;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .description {
+      max-width: 290px;
+      margin: 26px 0 0;
+      text-align: center;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 1.2;
+      text-wrap: pretty;
+    }
+
+    .socials {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 94px));
+      justify-content: center;
+      gap: 12px;
+      width: 100%;
+      margin-top: 50px;
+    }
+
+    .social-link {
+      display: grid;
+      place-items: center;
+      aspect-ratio: 1;
+      border: 1px solid #171717;
+      border-radius: 12px;
+      background: rgb(255 255 255 / 55%);
+      box-shadow: 0 5px 10px rgb(0 0 0 / 16%);
+      text-decoration: none;
+      transition:
+        transform 160ms ease,
+        box-shadow 160ms ease,
+        background-color 160ms ease;
+    }
+
+    .social-link img {
+      display: block;
+      width: 58px;
+      height: 58px;
+      object-fit: contain;
+    }
+
+    a:focus-visible {
+      outline: 3px solid #0077cc;
+      outline-offset: 5px;
+    }
+
+    @media (hover: hover) {
+      .social-link:hover {
+        transform: translateY(-3px);
+        background: #fff;
+        box-shadow: 0 8px 16px rgb(0 0 0 / 22%);
+      }
+    }
+
+    .social-link:active {
+      transform: translateY(1px);
+    }
+
+    .useful {
+      margin-top: 38px;
+      text-align: center;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 1.25;
+    }
+
+    .useful h2 {
+      margin: 0;
+      font-size: inherit;
+      font-weight: inherit;
+    }
+
+    .useful p {
+      margin: 0;
+    }
+
+    .contacts {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      margin-top: auto;
+      padding-top: 38px;
+      font-size: 14px;
+    }
+
+    .contact-placeholder {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .contact-placeholder img {
+      display: block;
+      width: 16px;
+      height: 16px;
+      object-fit: contain;
+    }
+
+    @media (min-width: 600px) {
+      body {
+        padding: 40px 24px;
+        background: #f6f7f8;
+      }
+
+      .card {
+        max-width: 390px;
+        min-height: 650px;
+        padding: 34px 30px;
+      }
+
+      .socials {
+        grid-template-columns: repeat(2, 104px);
+        gap: 14px;
+      }
+    }
+
+    @media (max-width: 340px) {
+      body {
+        padding: 12px;
+      }
+
+      .card {
+        padding: 26px 16px;
+      }
+
+      .description,
+      .useful {
+        font-size: 15px;
+      }
+
+      .socials {
+        margin-top: 36px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .social-link {
+        transition: none;
+      }
+
+      .social-link:hover,
+      .social-link:active {
+        transform: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="card">
+    <h1 class="brand">
+      <img src="./logo.png" alt="ВелоБро">
+    </h1>
+
+    <p class="description">
+      Блог про велопутешествия с маршрутами для поездок,
+      обзорами трасс, полезными советами и крутыми
+      встречами единомышленников ;)
+    </p>
+
+    <nav class="socials" aria-label="Соцсети ВелоБро">
+      <a
+        class="social-link"
+        href="https://t.me/velo_brother"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Telegram — открыть в новой вкладке"
+      >
+        <img src="./telegram.png" alt="" width="58" height="58">
+      </a>
+
+      <a
+        class="social-link"
+        href="https://dzen.ru/velo_brother"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Дзен — открыть в новой вкладке"
+      >
+        <img src="./dzen.png" alt="" width="58" height="58">
+      </a>
+
+      <a
+        class="social-link"
+        href="https://vk.ru/velo_brother"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="ВКонтакте — открыть в новой вкладке"
+      >
+        <img src="./vk.png" alt="" width="58" height="58">
+      </a>
+
+      <a
+        class="social-link"
+        href="https://youtube.com/@velo_brother"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="YouTube — открыть в новой вкладке"
+      >
+        <img src="./youtube.png" alt="" width="58" height="58">
+      </a>
+    </nav>
+
+    <section class="useful" aria-labelledby="useful-heading">
+      <h2 id="useful-heading">Полезные ссылки:</h2>
+
+      <!-- Пока адресов нет, это текст, а не пустые ссылки. -->
+      <p>Список веломаршрутов</p>
+      <p>Чат клуба “ВелоБро”</p>
+    </section>
+
+    <footer class="contacts">
+      <span>для связи:</span>
+
+      <!-- После получения контактов заменим span на ссылки. -->
+      <span
+        class="contact-placeholder"
+        title="Контактный Telegram пока не указан"
+      >
+        <img src="./telegram.png" alt="Telegram">
+      </span>
+
+      <span
+        class="contact-placeholder"
+        title="Контактная почта пока не указана"
+      >
+        <img src="./mail.png" alt="Электронная почта">
+      </span>
+    </footer>
+  </main>
+</body>
+</html>
